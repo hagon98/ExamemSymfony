@@ -1,0 +1,27 @@
+ {% extends "base.html.twig" %} 
+ {% block body %}
+
+{{ form_start(leFormulaire) }}
+{{ form_errors(leFormulaire)}}
+{{ form_widget(leFormulaire.nom, {'attr': {'class': 'form-control mt-3',
+                                             'placeholder': 'Entrer le nom du Film'                                            
+                                                }}) }}
+{{ form_widget(leFormulaire.resume, {'attr': {'class': 'form-control mt-3',
+                                             'placeholder': 'Entrer un résumé',
+                                                                                        
+                                                }}) }}
+{{ form_errors(leFormulaire)}}
+{{ form_widget(leFormulaire.realisateur, {'attr': {'class': 'form-control mt-3',
+                                             'placeholder': 'Entrer le nom du réalisateur'                                            
+                                                }}) }}
+{{ form_errors(leFormulaire)}}
+{{ form_widget(leFormulaire.sortie,     {'attr': {'class': 'form-control mt-3',
+                                             'placeholder': 'date de sortie',
+                                             'type': 'date'                                            
+                                                }}) }}
+{{ form_errors(leFormulaire)}}
+
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+
+{{ form_end(leFormulaire) }}
+{% endblock %}

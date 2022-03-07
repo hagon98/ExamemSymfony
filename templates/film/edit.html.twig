@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %} 
+ {% block body %}
+
+{{ form_start(formulaire) }}
+{{ form_errors(formulaire)}}
+{{ form_widget(formulaire.nom, {'attr': {'class': 'form-control mt-3',                                            
+                                                                                      
+                                                }}) }}
+{{ form_widget(formulaire.resume, {'attr': {'class': 'form-control mt-3',
+                                             
+                                                                                        
+                                                }}) }}
+{{ form_errors(formulaire)}}
+{{ form_widget(formulaire.realisateur, {'attr': {'class': 'form-control mt-3',
+                                                                                        
+                                                }}) }}
+{{ form_errors(formulaire)}}
+{{ form_widget(formulaire.sortie,     {'attr': {'class': 'form-control mt-3',                                             
+                                             'type': 'date'                                            
+                                                }}) }}
+{{ form_errors(formulaire)}}
+
+<button type="submit" class="btn btn-primary">Modifier</button>
+
+{{ form_end(formulaire) }}
+{% endblock %}

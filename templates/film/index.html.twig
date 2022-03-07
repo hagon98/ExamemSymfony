@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %} 
+    {% block body %}
+<div class="example-wrapper">
+    <h1>{{ controller_name }}! ✅</h1>
+
+    
+  {% for film in lesFilms %}
+
+<div class="row mt-3 mb-3 bg-info">
+  
+  
+  <h2> Nom du Film: {{film.nom}} </h2>  
+  <h3>Petit résumé : {{film.resume}} </h3>  
+  <h4>Le realisateur/trice : {{film.realisateur}} </h4>
+   <h4>La date de sortie : {{film.sortie | date}} </h4> 
+  <a href="{{path('unFilm', {id:film.id}) }}" class="btn btn-success">Voir</a> 
+  <hr>
+</div>  
+      
+  {% endfor %}
+</div>
+{% endblock %}
